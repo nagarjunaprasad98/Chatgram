@@ -1,8 +1,11 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import cors from 'cors';
 
 const app = express();
+// Allow requests from any origin (for development purposes)
+app.use(cors());
 dotenv.config();
 
 // Middleware to parse JSON request body
